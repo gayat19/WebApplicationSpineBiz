@@ -1,0 +1,67 @@
+<html>
+  <body>
+   <form action="File3.html">
+     <table>
+     <tr>
+	     <td>Name:</td>
+	     <td><input type="text"  pattern="[D][0-9][0-9][0-9]" required/> 
+	     <span>User name should be "D" followed by 3 digits Eg: D001</span>	</td>
+	    
+     </tr>
+     <tr>
+	     <td>Password :</td>
+	     <td><input type="password"  required/></td>
+	     	
+     </tr>
+     <tr>
+	     <td>Fav Colour</td>
+	     <td><input type="color"/></td>	
+     </tr>
+     <tr>
+	     <td>Date Of Birth</td>
+	     <td><input type="date"></td>	
+     </tr>
+     <tr>
+	     <td>Age</td>
+	     <td><input type="number" min="18"/></td>	
+     </tr>
+     <tr>
+	     <td>City</td>
+	     <td>
+	     	<select>
+	     		<option value="Agra">Agra</option>
+	     		<option value="Bangalore">Bangalore</option>
+	     		<option value="Chennai" selected>Chennai</option>
+	     		<option value="Delhi">Delhi</option>
+	     	</select>
+	     </td>	
+     </tr>
+     <tr>
+	     <td>Country</td>
+	     <td>
+	     	<input list="country"/ required>
+			<datalist id="country">
+				<option >India</option>
+	     		<option>China</option>
+	     		<option>USA</option>
+	     		<option>UK</option>
+			</datalist>
+	     </td>	
+     </tr>
+     <tr>
+	     <td>Gender</td>
+	     <td><input type="radio" name="gender" checked>Male<input type="radio" name="gender">Female</td>	
+     </tr>
+     <tr>
+	     <td>Qualification</td>
+	     <td><input type="checkbox" name="Qual" checked>UG<input type="checkbox" name="Qual">PG</td>	
+     </tr>
+     <tr>
+         <td><input type="submit"></td>
+         <td><input type="reset"></td>
+     </tr>
+   </table>
+   </form>
+	 
+  </body>
+</html>
