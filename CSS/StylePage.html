@@ -1,0 +1,67 @@
+<html>
+<head>
+  <link href="style1.css" rel="stylesheet"/>
+  <style>
+    /*Internal Styling*/
+    body{
+	background-color: yellow;
+}
+  		#d1{
+  				position:absolute;
+  		  		left:550px;
+  		  		top:150px;
+  		}
+  		
+  		.redAlert{
+  		background-color: red;
+  		color:white;
+  		}
+  		#frmUser{
+  		position:absolute;
+  		left:550px;
+  		top: 460px;
+  		padding-left:85px;
+  		} 
+  		@keyframes myAnimation{
+  		  /*from{left:10px;top:400px;}
+  		  to{left:100px;top:450px;}*/
+  		  10%{left:10px;top:400px;background-color: blue;}
+  		  30%{left:20px;top:450px;background-color: yellow;}
+  		  50%{left:40px;top:400px;background-color: green;}
+  		  70%{left:60px;top:450px;background-color: orange;}
+  		  100%{left:80px;top:400px;background-color: purple;}
+  		}
+  		#divAnimation{
+  		position:absolute;
+  		left:10px;
+  		top:400px;
+  		border-radius:45px;
+  		background-color: red;
+  		border:yellow 2px solid;
+  		height:100px;
+  		width:100px;
+  		text-align: center;
+  		display: inline-block;
+  		animation-name:myAnimation;
+  		animation-duration:10s;
+  		}
+  </style>
+</head>
+<body style = "background-color: pink;">
+	<div id="d1">
+		<!--Inline Style  -->
+		<p style="background-Color:lightBlue;border:solid green 1px;">This is my div 1</p>
+	</div>
+	<div id="d2">
+		<p>This is my div 2</p>
+		<span id="errorName" class="redAlert">Some error</span>
+	</div>
+	<div id="divAnimation">
+		Div1
+	</div>
+	<form id="frmUser">
+		<button>Submit</button>
+		<button class="redAlert">Reset</button>
+	</form>
+</body>
+</html>

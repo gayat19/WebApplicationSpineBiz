@@ -1,0 +1,18 @@
+/*External StyleSheet*/
+
+body{
+	/*background-image: url(BackgroundImage.jpg);*/
+		background-color: teal;
+}
+div{
+  	background-color: lightgreen;
+  	height:300px;
+  	width:300px;
+  	border-width:8px 5px 3px 4px;
+  	border-style: double dashed solid dotted;
+  	border-color: green  red;	
+  	/*border: darkgreen 4px solid;Complex Property value*/
+}
+button{
+  		border-radius:5px;
+}
