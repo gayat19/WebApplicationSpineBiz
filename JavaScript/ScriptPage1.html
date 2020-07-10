@@ -1,0 +1,28 @@
+<html>
+<head>
+	<link rel="stylesheet" href="bootstrap.css"/>
+	<title>Script File</title>
+	<script>
+			//alert("Hello World");
+		function btnClick(){
+			var name = document.getElementById("txtName").value;
+			alert("Welcome "+name);
+		}
+	</script>
+	<style>
+		p{
+			position:absolute;
+			left:500px;
+			top:150px;
+			height:30%;
+			width:30%;
+		}
+	</style>
+</head>
+<body>
+   <p class="alert alert-primary">
+   <input class="form-control" type="text" id="txtName"/>
+   <input class="btn btn-success" type="submit" onClick="btnClick()"/>
+   </p>
+</body>
+</html>
