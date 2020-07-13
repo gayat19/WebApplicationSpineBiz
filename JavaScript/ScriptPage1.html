@@ -2,27 +2,79 @@
 <head>
 	<link rel="stylesheet" href="bootstrap.css"/>
 	<title>Script File</title>
+	<script  src="script2.js"></script>
 	<script>
 			//alert("Hello World");
 		function btnClick(){
+			//JSON
+			var userData={
+					name:"",
+					Gender:"",
+					Age:"",
+					Phone:"",
+					City:""
+			}
 			var name = document.getElementById("txtName").value;
-			alert("Welcome "+name);
+			if(name=="")
+				{
+					alert("Name cannot be empty");
+					document.getElementById("txtName").focus();
+				}
+			else
+				userData.name = document.getElementById("txtName").value
+			
+			if(!document.getElementById("rdbMale").checked && !document.getElementById("rdbFemale").checked )
+				alert("Gender cannot be empty");
+			else
+				userData.Gender = frmUser.rdbMale.checked?frmUser.rdbMale.value:frmUser.rdbFemale.checked.value
+		   if(frmUser.ddlCity==""){
+			   alert("City cannot be empty")
+		   }
+		   else
+			   userData.City = frmUser.ddlCity.value;
+			
+		  console.log(userData);
+		  alert("Done");
 		}
 	</script>
 	<style>
-		p{
+		form{
 			position:absolute;
 			left:500px;
 			top:150px;
-			height:30%;
+			height:50%;
 			width:30%;
+		}
+		div{
+		position:absolute;
+			left:50px;
+			top:150px;
+
 		}
 	</style>
 </head>
 <body>
-   <p class="alert alert-primary">
-   <input class="form-control" type="text" id="txtName"/>
+   <form class="alert alert-primary" name="frmUser">
+   <label class="form-control" for="txtName">Name</label>
+   <input class="form-control" placeholder="Please enter your name" type="text" id="txtName"/>
+   <label class="form-control">Gender</label>
+   <input type="radio" name="gender" id="rdbMale" value="male">Male
+   <input type="radio" name="gender" id="rdbFemale" value="female">Female
+   <label class="form-control" for="ddlCity">City</label>
+   <input list ="lstCity" class="form-control" id="ddlCity">
+   <datalist id="lstCity">
+   	<option value="Agra">
+   	<option value="Bengaluru">
+   	<option value="Chennai">
+   	<option value="Delhi">
+   </datalist>
+   <br/>
    <input class="btn btn-success" type="submit" onClick="btnClick()"/>
-   </p>
+   </form>
+   <div id="para1" class="alert alert-info" >
+   		Hello
+   <button class="btn btn-primary" onClick="fnChangeData()">Click here</button>
+   </div>
+  
 </body>
 </html>
