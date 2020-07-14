@@ -36,6 +36,11 @@
 		  console.log(userData);
 		  alert("Done");
 		}
+		function showChange(){
+			document.getElementById("divClick").style.backgroundColor = "green";
+			console.log("Double clicked");
+			
+		}
 	</script>
 	<style>
 		form{
@@ -56,7 +61,7 @@
 <body>
    <form class="alert alert-primary" name="frmUser">
    <label class="form-control" for="txtName">Name</label>
-   <input class="form-control" placeholder="Please enter your name" type="text" id="txtName"/>
+   <input class="form-control" placeholder="Please enter your name" type="text" id="txtName" onChange="something()"/>
    <label class="form-control">Gender</label>
    <input type="radio" name="gender" id="rdbMale" value="male">Male
    <input type="radio" name="gender" id="rdbFemale" value="female">Female
@@ -75,6 +80,8 @@
    		Hello
    <button class="btn btn-primary" onClick="fnChangeData()">Click here</button>
    </div>
-  
+  	<div id="divClick" onDblClick="showChange()">
+  		Double Click to see the change
+  	</div>
 </body>
 </html>
