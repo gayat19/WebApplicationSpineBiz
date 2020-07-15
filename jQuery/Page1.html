@@ -1,0 +1,45 @@
+<html>
+  <head>
+  	<script src="jQuery.js"></script>
+  <script>
+  		/*function f2(){
+  			alert("Hello");
+  		}*/
+  		$(document).ready(function(){
+  			$(".c1").click(function(){
+  				$(this).html("Changed by jQuery");
+  			});
+  			$("#btnDo").click(function(){
+  				$("#div1").slideUp(2000);
+  			});
+  			$("#btnUnDo").click(functim,on(){
+  				$("#div1").slideDown(2000);
+  			});
+  		}
+	);
+  </script>
+  <style>
+  		div{
+  			height:100px;
+  			width:100px;
+  		}
+  		#div1{
+  			background-color: pink;
+  		}
+  		#div2{
+  			background-color: lightgreen;
+  		}
+  </style>
+  </head>
+  <body>
+  		<button id="btnDo">Click me to Do</button>
+  		<button id="btnUnDo">Click me to UnDo</button>
+  		<div id="div1" class="c1">
+  			Hello from div
+  		</div>
+  		<hr/>
+  		<div id="div2">
+  			Div 2 is here
+  		</div>
+  </body>
+</html>
