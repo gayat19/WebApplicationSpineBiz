@@ -7,5 +7,6 @@
 <body>
 	<h1>Hello from the first web app</h1>
 	<h2>${message}</h2>
+	<h2>Welcome ${name}</h2>
 </body>
 </html>

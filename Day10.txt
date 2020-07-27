@@ -1,0 +1,13 @@
+REST
+
+
+SpineBiz/Customer - GET- all customer
+SpineBiz/Customer - POST - Create a new Customer
+SpineBiz/Customer/C001 - GET - One Customer
+SpineBiz/Customer/C001 - PUT - Update one Customer
+SpineBiz/Customer/C001 - DELETE - Delete one Customer
+
+1) Edit Web.XML to customise it for our application
+2) Create a Servlet-Dispacther XML File
+3) Create an controller for our application
+4) Create the HTML Page(View)
