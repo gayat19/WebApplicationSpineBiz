@@ -1,0 +1,14 @@
+{
+    "telemetry.machineId": "21fcf0826f8bc6c49672f4a3903bc4ff502a70abec874e413fc27c4245aa1dcf",
+    "openedPathsList": {
+        "workspaces3": [
+            {
+                "id": "22db0d8f008477c6dfe5ce1856c3befc",
+                "configURIPath": "file:///c%3A/Users/Gayathri%20Mahadevan/SampleWorkspace/.metadata/codemix.code-workspace"
+            }
+        ],
+        "files2": []
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#221a0f"
+}

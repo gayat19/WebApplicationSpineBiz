@@ -1,0 +1,29 @@
+package crud.mvcCrud.dao;
+
+import java.util.List;
+import javax.sql.DataSource;
+import org.springframework.jdbc.core.JdbcTemplate;
+import crud.mvcCrud.bean.Customer;
+
+public class CustomerDaoImpl implements CustomerDao{
+	
+	JdbcTemplate jdbcTemplate;
+	
+	public CustomerDaoImpl() {}
+	public CustomerDaoImpl(DataSource datasource) {
+		jdbcTemplate = new JdbcTemplate(datasource);
+	}
+
+	@Override
+	public List<Customer> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int save(Customer customer) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

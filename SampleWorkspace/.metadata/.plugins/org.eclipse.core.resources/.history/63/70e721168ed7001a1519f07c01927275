@@ -1,0 +1,9 @@
+import crud.mvcCrud.bean;
+
+package crud.mvcCrud.dao;
+
+public interface CustomerDao {
+	
+	public List<Customer> getAll();
+
+}

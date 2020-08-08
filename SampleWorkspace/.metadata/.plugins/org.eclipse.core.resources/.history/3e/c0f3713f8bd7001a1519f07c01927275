@@ -1,0 +1,5 @@
+package crud.mvcCrud.bean;
+
+public class Customer {
+
+}
