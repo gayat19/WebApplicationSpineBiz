@@ -83,6 +83,7 @@ footer {
       <li><a href="/mvcCrud" target="main">Home</a></li>
       <li><a href="/mvcCrud/customers" target="main">View Customers</a></li>
       <li><a href="/mvcCrud/add" target="main">Add Customer</a></li>
+       <li><a href="/mvcCrud/transact" target="main">Add Customer</a></li>
     </ul>
   </nav>
   

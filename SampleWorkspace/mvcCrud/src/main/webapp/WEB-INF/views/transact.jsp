@@ -7,11 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/mvcCrud/add" method=post>
-	     <label>Id</label>:<input type="text" name="id"/><br/>
-	     <label>Name</label>:<input type="text" name="name"/><br/>
-	     <label>Age</label>:<input type="text" name="age"/><br/>
-	     <input type="submit" value="Add Customer"/>
+<form action="/mvcCrud/transact" method=post>
+	     <label>From Account</label>:<input type="text" name="fromAccount"/><br/>
+	     <label>To Account</label>:<input type="text" name="toAccount"/><br/>
+	     <label>Amount</label>:<input type="number" name="amount"/><br/>
+	     <input type="submit" value="Transfer Fund"/>
 	</form>
 </body>
 </html>

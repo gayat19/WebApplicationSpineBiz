@@ -7,11 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/mvcCrud/add" method=post>
-	     <label>Id</label>:<input type="text" name="id"/><br/>
-	     <label>Name</label>:<input type="text" name="name"/><br/>
-	     <label>Age</label>:<input type="text" name="age"/><br/>
-	     <input type="submit" value="Add Customer"/>
-	</form>
+	<h1>${Message}</h1>
 </body>
 </html>

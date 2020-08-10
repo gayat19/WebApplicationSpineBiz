@@ -14,9 +14,11 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import crud.mvcCrud.dao.CustomerDao;
 import crud.mvcCrud.dao.CustomerDaoImpl;
+import crud.mvcCrud.dao.TransactDao;
+import crud.mvcCrud.dao.TransactDaoImpl;
 
 @Configuration
-@ComponentScan(basePackages="crud.mvcCrud")
+@ComponentScan(basePackages="crud.mvcCrud.controller")
 @EnableWebMvc
 public class MvcConfiguration extends WebMvcConfigurerAdapter{
 
@@ -46,5 +48,9 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter{
 	@Bean
 	public CustomerDao getCustomerDao() {
 		return new CustomerDaoImpl(getDataSource());
+	}
+	@Bean
+	public TransactDao getTransactDao() {
+		return new TransactDaoImpl(getDataSource());
 	}
 }
