@@ -4,9 +4,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 import javax.sql.DataSource;
+
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
+import crud.mvcCrud.bean.Account;
 import crud.mvcCrud.bean.Customer;
 
 public class CustomerDaoImpl implements CustomerDao{
@@ -46,6 +49,14 @@ public class CustomerDaoImpl implements CustomerDao{
 		catch(Exception ex) {
 			result = 0;
 		}
+		return result;
+	}
+	public int login(Customer customer) {
+		int result = 0;
+		String strSelect = "Select * from customer where id=?";
+		Customer dbCustomer = jdbcTemplate.queryForObject(strSelect,new Object[] {customer.getId()}, new BeanPropertyRowMapper<Customer>(Customer.class));
+		if(dbCustomer!= null && dbCustomer.getName().equals(customer.getName()))
+			result = 1;
 		return result;
 	}
 

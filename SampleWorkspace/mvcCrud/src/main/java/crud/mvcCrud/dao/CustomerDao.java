@@ -7,5 +7,6 @@ public interface CustomerDao {
 	
 	public List<Customer> getAll();
 	public int save(Customer customer);
+	public int login(Customer customer);
 
 }

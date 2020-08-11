@@ -40,6 +40,31 @@ public class HomeController {
 		
 		return modelAndView;
 	}
+	
+	@RequestMapping(value="/login")
+	public ModelAndView userLogin() throws IOException{
+		ModelAndView modelAndView =new ModelAndView("userlogin");
+		return modelAndView;
+	}
+	@RequestMapping(value="/login", method=RequestMethod.POST)
+	public ModelAndView userPostLogin(@ModelAttribute Customer customer) throws IOException{
+		ModelAndView modelAndView =null;
+		int res = customerDao.login(customer);
+		System.out.println(res);
+		if(res == 1)
+		{
+			System.out.println("Done");
+			modelAndView =new ModelAndView("home");
+			modelAndView.addObject("message","Welcome. You are Logged in...");
+		}
+		else
+		{
+			modelAndView =new ModelAndView("userlogin");
+			modelAndView.addObject("message","Invalid username or password");
+		}
+			
+		return modelAndView;
+	}
 	@RequestMapping(value="/add", method=RequestMethod.POST)
 	public ModelAndView addCustomer(@ModelAttribute Customer customer) throws IOException{
 		ModelAndView modelAndView =null;//=new ModelAndView("addCustomer");
